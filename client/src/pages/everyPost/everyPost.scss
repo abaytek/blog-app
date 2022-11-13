@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 0 6%;
+  margin-right: auto;
+  margin-left: auto;
+
+  .container {
+    display: flex;
+  }
+
+  .title {
+    margin: 30px 20px;
+    font-size: 25px;
+
+    .underline {
+      height: 4px;
+      width: 80px;
+      margin-top: 5px;
+      background-color: tomato;
+    }
+  }
+  .posts_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

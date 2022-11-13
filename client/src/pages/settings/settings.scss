@@ -1,0 +1,76 @@
+.settings {
+  display: flex;
+
+  .settingsWrapper {
+    flex: 9;
+    padding: 20px;
+
+    .settingsTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .updateTitle {
+        font-size: 30px;
+        color: rgb(122, 71, 71);
+        margin-bottom: 20px;
+      }
+      .deleteTitle {
+        color: white;
+        background-color: rgb(174, 38, 38);
+        padding: 7px 12px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+    .settingsForm {
+      display: flex;
+      flex-direction: column;
+
+      .profile {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        & > img {
+          height: 70px;
+          width: 70px;
+          border-radius: 10px;
+        }
+        & > label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          height: 25px;
+          font-size: 20px;
+          width: 25px;
+          border-radius: 50%;
+          border: 1px solid;
+          cursor: pointer;
+        }
+      }
+      & > input {
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        margin: 10px 0;
+        outline: none;
+        color: gray;
+        font-size: 18px;
+      }
+      .settingsSubmit {
+        padding: 10px 15px;
+        background-color: teal;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        width: 150px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
