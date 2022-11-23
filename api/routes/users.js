@@ -23,7 +23,7 @@ router.put("/:id", async (req, res) => {
       res.status(500).json(error);
     }
   } else {
-    res.status(401).json("Update not allowed");
+    res.status(401).json("Update only allowed for your username");
   }
 });
 

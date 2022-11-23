@@ -19,6 +19,9 @@
       color: teal !important;
       cursor: pointer;
     }
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
   .topbar__center {
     flex: 6;
@@ -29,8 +32,8 @@
     flex: 3;
 
     .profile {
-      width: 30px;
-      height: 30px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       object-fit: cover;
       cursor: pointer;

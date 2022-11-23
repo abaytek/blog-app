@@ -19,9 +19,9 @@ function Settings() {
     dispatch({ type: "UPDATE_START" });
     const updatedUser = {
       userId: user._id,
-      username,
-      email,
-      password,
+      username: username,
+      email: email,
+      password: password,
     };
     if (file) {
       const data = new FormData();
@@ -31,16 +31,16 @@ function Settings() {
       updatedUser.profilePic = fileName;
       try {
         await axios.post("http://localhost:5000/api/upload", data);
+        setSuccess(true);
       } catch (err) {
         console.log(err);
       }
     }
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/users/${user._id}`,
+        "http://localhost:5000/api/users/" + user._id,
         updatedUser
       );
-      setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
@@ -52,7 +52,9 @@ function Settings() {
         .delete("http://localhost:5000/api/users/" + user._id)
         .then((res) => console.log(res.data))
         .then(dispatch({ type: "LOGOUT" }));
-    } catch (err) {}
+    } catch (err) {
+      console.log("Cannot Delete an Account");
+    }
   };
 
   return (

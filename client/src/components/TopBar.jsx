@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
 import { Facebook, Instagram, Pinterest, Twitter } from "@material-ui/icons";
 import "./topbar.scss";
+// import { Avatar } from "@material-ui/core";
 
 function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -25,11 +26,7 @@ function TopBar() {
               HOME
             </Link>
           </li>
-          {/* <li className="topbar__list">
-            <Link className="link" to="/about">
-              ABOUT
-            </Link>
-          </li> */}
+
           <li className="topbar__list">
             <Link className="link" to="/posts">
               POSTS
@@ -68,7 +65,9 @@ function TopBar() {
             </li>
           </ul>
         )}
-        <p className="search__icon">me</p>
+        {/* {!user && <Avatar />} */}
+
+        {/* <p className="search__icon">me</p> */}
       </div>
     </div>
   );

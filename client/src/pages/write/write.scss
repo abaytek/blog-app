@@ -16,6 +16,10 @@
       margin-left: 150px;
       display: flex;
       align-items: center;
+      @media (max-width: 600px) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
 
       .writeIcon {
         height: 30px;
@@ -48,7 +52,7 @@
     }
     .writeSubmit {
       position: absolute;
-      top: 20px;
+      top: 10px;
       padding: 10px 15px;
       background-color: rgb(104, 29, 29);
       border: none;
@@ -56,6 +60,9 @@
       border-radius: 10px;
       right: 100px;
       cursor: pointer;
+      @media (max-width: 600px) {
+        right: 20px;
+      }
     }
   }
 }
