@@ -1,2 +1,2 @@
-# abay-blog-app
+# blog-app
 Full stack blog app with MERN
